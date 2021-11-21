@@ -122,6 +122,8 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             [[fallthrough]];
         case Mode::CAMERA_STREAMING_HIGH:
             [[fallthrough]];
+        case Mode::GAME_LOADING:
+            [[fallthrough]];
         default:
             if (enabled) {
                 HintManager::GetInstance()->DoHint(toString(type));
